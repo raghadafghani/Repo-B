@@ -1,0 +1,31 @@
+{
+  "outputs": {
+    "predictions": {
+      "type": "array",
+      "format": "float32",
+      "shape": ["batch_size", "num_classes"],
+      "description": "Model prediction probabilities"
+    },
+    "confidence": {
+      "type": "array", 
+      "format": "float32",
+      "shape": ["batch_size"],
+      "description": "Confidence scores for predictions"
+    },
+    "embeddings": {
+      "type": "array",
+      "format": "float32", 
+      "shape": ["batch_size", "embedding_dim"],
+      "description": "Feature embeddings from model"
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "model_version": "string",
+        "inference_time": "float",
+        "timestamp": "string"
+      },
+      "description": "Metadata about the inference"
+    }
+  }
+}

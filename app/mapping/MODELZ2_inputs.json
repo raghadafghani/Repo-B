@@ -1,0 +1,35 @@
+{
+  "inputs": {
+    "features": {
+      "type": "array",
+      "format": "float32",
+      "shape": ["batch_size", "feature_dim"],
+      "description": "Input feature vector",
+      "required": true
+    },
+    "sequence_length": {
+      "type": "integer",
+      "min": 1,
+      "max": 1024,
+      "description": "Length of input sequences",
+      "required": false
+    },
+    "attention_mask": {
+      "type": "array",
+      "format": "bool",
+      "shape": ["batch_size", "sequence_length"],
+      "description": "Attention mask for padded sequences",
+      "required": false
+    },
+    "categorical_features": {
+      "type": "object",
+      "properties": {
+        "category_a": "integer",
+        "category_b": "string",
+        "category_c": "boolean"
+      },
+      "description": "Categorical input features",
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "states": {
+    "idle": {
+      "id": "idle",
+      "description": "Model is in idle state",
+      "transitions": ["loading", "error"]
+    },
+    "loading": {
+      "id": "loading", 
+      "description": "Model is loading data",
+      "transitions": ["processing", "error"]
+    },
+    "processing": {
+      "id": "processing",
+      "description": "Model is processing data", 
+      "transitions": ["completed", "error"]
+    },
+    "completed": {
+      "id": "completed",
+      "description": "Model processing completed",
+      "transitions": ["idle"]
+    },
+    "error": {
+      "id": "error",
+      "description": "Model encountered an error",
+      "transitions": ["idle"]
+    }
+  }
+}

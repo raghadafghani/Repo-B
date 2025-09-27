@@ -1,0 +1,27 @@
+{
+  "mappings": {
+    "input_fields": {
+      "user_id": "customer_identifier",
+      "transaction_amount": "amount_usd", 
+      "transaction_date": "date_timestamp",
+      "merchant_category": "category_code"
+    },
+    "output_fields": {
+      "risk_score": "fraud_probability",
+      "recommendation": "action_required",
+      "confidence_level": "model_confidence"
+    },
+    "transformations": {
+      "date_format": "ISO8601",
+      "currency_conversion": "USD",
+      "normalization": "min_max_scaling"
+    },
+    "validation_rules": {
+      "required_fields": ["user_id", "transaction_amount"],
+      "data_types": {
+        "user_id": "string",
+        "transaction_amount": "number"
+      }
+    }
+  }
+}
