@@ -4,7 +4,7 @@
       "type": "array",
       "format": "float32",
       "shape": ["batch_size", "feature_dim"],
-      "description": "Input feature vector",
+      "description": "Input feature vectors",
       "required": true
     },
     "sequence_length": {
